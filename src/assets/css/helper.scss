@@ -1,0 +1,47 @@
+@import '../css/var.scss';
+.d-flex {
+    display: flex;
+}
+.align-items-center{
+    align-items: center;
+}
+.justify-content-between{
+    justify-content: space-between;
+}
+.text-center{
+    text-align: center;
+}
+.text-right {
+    text-align: right;
+}
+.title {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 36px;
+    color: $black;
+    margin-bottom: 32px;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+button {
+    border: 0;
+    background-color: unset;
+    cursor: pointer;
+    font-size: 15px;
+}
+ul {
+    list-style-type: none;
+}
+input,
+textarea {
+    border: 1px solid $grey;
+    &:focus {
+        outline-color: $green;
+    }
+}

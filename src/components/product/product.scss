@@ -1,0 +1,168 @@
+@import '../../assets/css/var.scss';
+.product {
+    &__item {
+        height: 406px;
+    }
+    &s {
+        .splide__arrows {
+            .splide__arrow {
+                background: unset;
+                &--prev {
+                    left: -50px;
+                }
+                &--next {
+                    right: -50px;
+                }
+            }
+        }
+    }
+    &__box {
+        border: 1px solid #E6E9EC;
+        border-radius: 10px;
+        padding: 25px;
+        background-color: #fff;
+        position: relative;
+        overflow: hidden;
+        transition: 0.5s;
+        &:hover {
+            box-shadow: 0px 10px 25px rgba(102, 102, 102, 0.1);
+            .product__btns {
+                right: 16px;
+            }
+            .product__cart {
+                max-height: 200px;
+                opacity: 1;
+            }
+        }
+    }
+    &__cart {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-height: 0;
+        overflow: hidden;
+        margin-top: 16px;
+        transition: 0.5s;
+        transition-delay: 0.5s;
+        opacity: 0;
+    }
+    &__img {
+        height: 155px;
+        max-width: 90%;
+        object-fit: contain;
+        display: block;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+    &__status {
+        position: absolute;
+        top: 17px;
+        left: 16px;
+    }
+    &__rate {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        margin-bottom: 7px;
+        img {
+            margin-right: 2px;
+            &.gray {
+                filter: grayscale(1);
+                opacity: 0.5;
+            }
+        }
+    }
+    &__price {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        .new {
+            font-size: 20px;
+            font-weight: 800;
+            span {
+                font-size: 14px;
+            }
+        }
+        .old {
+            color: #8E9499;
+            font-size: 14px;
+            position: relative;
+            &::before {
+                content: '';
+                width: 57px;
+                height: 5px;
+                display: inline-block;
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                background: url('../../assets/img/icons/line.png') no-repeat center center/contain;
+            }
+        }
+    }
+    &__name {
+        font-size: 16px;
+        line-height: 26px;
+        display: inline-block;
+        margin-top: 9px;
+        
+        height: 50px;
+        overflow: hidden;
+        &:hover {
+            color: darken($green,20%);
+        }
+    }
+    &__btns {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        right: -200px;
+        top: 16px;
+        gap: 11px;
+        transition: 0.5s;
+        button {
+            width: 39px;
+            height: 39px;
+            border-radius: 50%;
+            border: 0.83px solid #E9E9E9;
+            background-color: #F2F2F2;
+            &:hover {
+                background-color: darken($green,10%);
+                img {
+                    filter:brightness(0) invert(1);
+                }
+            }
+        }
+    }
+    
+    &__count {
+        display: flex;
+        align-items: center;
+        .val {
+            width: 29px;
+            height: 29px;
+            border-radius: 8px;
+            background-color: #E6E9EC;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: 700;
+            margin: 0px 8px;
+        }
+    }
+    &__add {
+        padding: 10px 29px;
+        border-radius: 10px;
+        background: $green;
+        border: 1px solid $yellow;
+        box-shadow: 0px 2px 0px $yellow;
+        font-size: 15px;
+        font-weight: 500;
+        &:hover {
+            background-color: darken($green,10%);
+        }
+    }
+}
